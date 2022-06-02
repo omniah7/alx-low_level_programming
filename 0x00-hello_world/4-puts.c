@@ -1,5 +1,8 @@
 #include <stdio.h>
-/*This is a single line program*/
+/**
+* main - prints a quote
+* Return (0)
+*/
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
