@@ -10,5 +10,5 @@ int main(void)
 	for (n = 122 ; n >= 97 ; n--)
 		putchar(n);
 	putchar('\n');
-	retuen (0);
+	return (0);
 }
