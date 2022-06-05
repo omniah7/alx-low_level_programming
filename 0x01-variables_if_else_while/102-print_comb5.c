@@ -13,18 +13,21 @@ int main(void)
 		{
 			for (k = 0  ; k <= 9 ; k++)
 			{
-				for(l = 0 ; l <= 9 ; l++)
-				{	
-					putchar(n + '0');
-					putchar(m + '0');
-					putchar(' ');
-					putchar(k + '0');
-					putchar(l + '0');
-					/* if not the last number */
-					if (n != 9 || m != 8 || k != 9 || l != 9)
+				for (l = 0 ; l <= 9 ; l++)
+				{
+					if (n !=k || m != l)
 					{
-					putchar(',');
-					putchar(' ');
+						putchar(n + '0');
+						putchar(m + '0');
+						putchar(' ');
+						putchar(k + '0');
+						putchar(l + '0');
+						/* if not the last number */
+						if (n != 9 || m != 8 || k != 9 || l != 9)
+						{
+						putchar(',');
+						putchar(' ');
+						}
 					}
 				}
 			}
