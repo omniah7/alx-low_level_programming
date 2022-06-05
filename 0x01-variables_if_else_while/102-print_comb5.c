@@ -20,11 +20,12 @@ int main(void)
 					putchar(' ');
 					putchar(k + '0');
 					putchar(l + '0');
-				/* if not the last number */
-				if (n != 9 || m != 8 || k != 9 || l != 9)
-				{
-				putchar(',');
-				putchar(' ');
+					/* if not the last number */
+					if (n != 9 || m != 8 || k != 9 || l != 9)
+					{
+					putchar(',');
+					putchar(' ');
+					}
 				}
 			}
 		}
