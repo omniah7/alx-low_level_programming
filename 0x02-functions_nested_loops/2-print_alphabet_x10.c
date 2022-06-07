@@ -9,7 +9,7 @@ void print_alphabet_x10(void)
 	n = 10;
 	while (n)
 	{
-		print_alphabet(void);
+		print_alphabet();
 		n--;
 	}
 }
