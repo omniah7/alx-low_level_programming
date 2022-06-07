@@ -12,10 +12,11 @@ int main(void)
 		for (m = 0 ; m <= 9 ; m++)
 		{
 			for (k = 0  ; k <= 9 ; k++)
-			{
-				for (l = m + 1 ; l <= 9 ; l++)
+			{if ( n <= k && m <= l){
+				for (l = 0 ; l <= 9 ; l++)
 				{
-					if (n != k || m != l)
+					if (!(n == k && m == l)){
+                                        if ( n <= k && m <= l)
 					{
 						putchar(n + '0');
 						putchar(m + '0');
@@ -28,8 +29,8 @@ int main(void)
 						putchar(',');
 						putchar(' ');
 						}
-					}
-				}
+					}}
+				}}
 			}
 		}
 	}
