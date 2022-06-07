@@ -12,7 +12,7 @@ int main(void)
 		for (m = 0 ; m <= 9 ; m++)
 		{
 			for (k = 0  ; k <= 9 ; k++)
-			{
+			{if ( n <= k && m <= l){
 				for (l = 0 ; l <= 9 ; l++)
 				{
 					if (!(n == k && m == l)){
@@ -30,7 +30,7 @@ int main(void)
 						putchar(' ');
 						}
 					}}
-				}
+				}}
 			}
 		}
 	}
