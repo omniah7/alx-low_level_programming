@@ -15,7 +15,8 @@ int main(void)
 			{
 				for (l = 0 ; l <= 9 ; l++)
 				{
-					if (!(n <= k && m <= l))
+					if (!(n == k && m == l)){
+                                        if ( n <= k && m <= l)
 					{
 						putchar(n + '0');
 						putchar(m + '0');
@@ -28,7 +29,7 @@ int main(void)
 						putchar(',');
 						putchar(' ');
 						}
-					}
+					}}
 				}
 			}
 		}
