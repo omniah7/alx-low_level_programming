@@ -13,10 +13,11 @@ int main(void)
 	{
 		sum = j + k;
 		printf("%i", sum);
-		if (i !=50)
+		if (i != 50)
 			printf(", ");
 		j = k;
 		k = sum;
 	}
 	printf("\n");
+	return (0);
 }
