@@ -10,7 +10,7 @@ int main(void)
 	j = 0;
 	k = 1;
 	even = 0;
-	while (sum <= 4000000)
+	while (sum < 4000000)
 	{
 		if (sum % 2 == 0)
 			even += sum;
