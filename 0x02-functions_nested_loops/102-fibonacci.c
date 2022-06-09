@@ -9,11 +9,11 @@ int main(void)
 
 	j = 0;
 	k = 1;
-	for (i = 0; i <= 50; i++)
+	for (i = 0; i < 50; i++)
 	{
 		sum = j + k;
 		printf("%li", sum);
-		if (i != 50)
+		if (i != 49)
 			printf(", ");
 		j = k;
 		k = sum;
