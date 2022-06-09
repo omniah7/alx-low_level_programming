@@ -5,22 +5,19 @@
  */
 int main(void)
 {
-	long int j, k, sum;
+	long int j, k, sum, even;
 
 	j = 0;
 	k = 1;
+	even = 0;
 	while (sum <= 4000000)
 	{
 		if (sum % 2 == 0)
-		{
-			printf("%li", sum);
-
-			printf(", ");
-		}
+			even += sum;
 		j = k;
 		k = sum;
 		sum = j + k;
 	}
-	printf("\n");
+	printf("%li\n", even);
 	return (0);
 }
