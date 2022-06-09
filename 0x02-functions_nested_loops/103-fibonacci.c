@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	long int j, k, sum, even;
+	int j, k, sum, even;
 
 	j = 0;
 	k = 1;
@@ -18,6 +18,6 @@ int main(void)
 		k = sum;
 		sum = j + k;
 	}
-	printf("%li\n", even);
+	printf("%i\n", even);
 	return (0);
 }
