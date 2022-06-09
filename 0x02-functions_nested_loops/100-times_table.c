@@ -12,8 +12,8 @@ void print_times_table(int n)
 		{
 			for (i = 0; i <= n; i++)
 			{
-				d1 = (i * j) / 100;
-				d2 = (i * j) / 10;
+				d1 = ((i * j) % 1000) / 100;
+				d2 = ((i * j) % 100) / 10;
 				d3 = (i * j) % 10;
 
 				if (i != 0)
