@@ -9,10 +9,10 @@ int main(void)
 
 	j = 0;
 	k = 1;
-	for(i = 0; i <= 50; i++)
+	for (i = 0; i <= 50; i++)
 	{
 		sum = j + k;
-		printf("%i", sum);
+		printf("%li", sum);
 		if (i != 50)
 			printf(", ");
 		j = k;
