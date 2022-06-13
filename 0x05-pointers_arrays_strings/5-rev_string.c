@@ -16,7 +16,7 @@ void rev_string(char *s)
 	{
 		tmp = *s;
 		/* value = corresponding value in the array*/
-		*s = *(s + (l - 1 - 2 * i);
+		*s = *(s + (l - 1 - 2 * i));
 		*(s + l - 1 - 2 * i) = tmp;
 		s++;
 	}
