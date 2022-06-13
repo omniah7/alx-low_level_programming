@@ -5,5 +5,20 @@
  */
 void rev_string(char *s)
 {
-  
+	int l, i;
+	char tmp;
+
+	l = 0;
+	while (*s != '\0')
+		l++;
+
+	l--; 
+	for (i = 0; i < l / 2; i++)
+	{
+		tmp = *s;
+		/* value = corresponding value in the array*/
+		*s = *(s + l - 2 * i);
+		*(s + l - 2 * i) = tmp;
+		s++;
+	}
 }
