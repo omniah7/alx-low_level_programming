@@ -5,8 +5,8 @@
  */
 void  puts2(char *str)
 {
-  int i;
-  
+	int i;
+
 	for (i = 0; *str != '\0'; i++)
 	{
 		if (i % 2 == 0)
