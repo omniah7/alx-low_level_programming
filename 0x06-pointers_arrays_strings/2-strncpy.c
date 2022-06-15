@@ -1,6 +1,6 @@
 
 /**
- * *_strncat - copies a string
+ * *_strncpy - copies a string
  * @dest: copied to, char pointer
  * @src: copied from, char pointer
  * @n: number of bytes from src
