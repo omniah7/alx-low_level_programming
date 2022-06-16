@@ -18,9 +18,9 @@ char *leet(char *p)
 	
 	for (i = 0; p[i] != '\0'; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (j = 0; j < 9; j += 2)
 		{
-			if (p[i] == let[j])
+			if (p[i] == let[j] || p[i] = let[j + 1])
 			{
 				p[i] = num[j / 2];
 				break;
