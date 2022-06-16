@@ -14,7 +14,7 @@ char *leet(char *p)
 {
 	int i, j;
 	char let[] = {'o', 'O', 'l', 'L', 'e', 'E', 'a', 'A', 't', 'T'};
-	char num[] = {0, 1, 3, 4, 7};
+	int num[] = {0, 1, 3, 4, 7};
 	
 	for (i = 0; p[i] != '\0'; i++)
 	{
@@ -24,7 +24,7 @@ char *leet(char *p)
 			{
 				p[i] = num[j / 2];
 				break;
-			}	
+			}
 		}
 	}
 	return (p);
