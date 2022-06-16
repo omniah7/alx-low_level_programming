@@ -29,4 +29,5 @@ char *leet(char *p)
 		}
 
 	}
+	return (p);
 }
