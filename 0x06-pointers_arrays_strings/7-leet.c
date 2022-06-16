@@ -13,16 +13,17 @@
 char *leet(char *p)
 {
 	int i, j;
-	char let[] = {'o', 'O', 'l', 'L', 'e', 'E', 'a', 'A', 't', 'T'};
+	char low[] = {'o', 'l', 'e', 'a', 't',};
+	char upp[] = {'O', 'L', 'E', 'A', 'T'};
 	char num[] = {'0', '1', '3', '4', '7'};
 	
 	for (i = 0; p[i] != '\0'; i++)
 	{
-		for (j = 0; j < 9; j += 2)
+		for (j = 0; j < 5; j++)
 		{
-			if (p[i] == let[j] || p[i] == let[j + 1])
+			if (p[i] == low[j] || p[i] == upp[j])
 			{
-				p[i] = num[j / 2];
+				p[i] = num[j];
 				break;
 			}
 		}
