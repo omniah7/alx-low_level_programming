@@ -13,14 +13,14 @@
 char *leet(char *p)
 {
 	int i, j;
-	int let[] = {'o', 'O', 'l', 'L', 'e', 'E', 'a', 'A', 't', 'T'};
+	char let[] = {'o', 'O', 'l', 'L', 'e', 'E', 'a', 'A', 't', 'T'};
 	int num[] = {0, 1, 3, 4, 7};
 	
 	for (i = 0; p[i] != '\0'; i++)
 	{
 		for (j = 0; j < 9; j += 2)
 		{
-			if (p[i] == let[j] || p[i] = let[j + 1])
+			if (p[i] == let[j] || p[i] == let[j + 1])
 			{
 				p[i] = num[j / 2];
 				break;
