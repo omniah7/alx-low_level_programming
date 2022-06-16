@@ -13,8 +13,8 @@
 char *leet(char *p)
 {
 	int i, j;
-	int let[] = {'o', 'O', 'l', 'L', 'e', 'E', 'a', 'A', 't', 'T'};
-	int num[] = {0, 1, 3, 4, 7};
+	char let[] = {'o', 'O', 'l', 'L', 'e', 'E', 'a', 'A', 't', 'T'};
+	char num[] = {0, 1, 3, 4, 7};
 	
 	for (i = 0; p[i] != '\0'; i++)
 	{
