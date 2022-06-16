@@ -5,7 +5,7 @@
  */
 void reverse_array(int *a, int n)
 {
-	int tmp;
+	int i, tmp;
 
 	for (i = 0; i <= n / 2 - 1; i++)
 	{
