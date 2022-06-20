@@ -13,8 +13,8 @@
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
-			return (s + (i - 1));
+			return (s + i);
 		i++;
 	}
-	return ('');
+	return ('\0');
  }
