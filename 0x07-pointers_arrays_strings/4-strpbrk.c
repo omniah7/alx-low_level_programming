@@ -3,7 +3,7 @@
  * @s: pointer to a string
  * @accept: array of string to be matched
  * Return: a pointer to the byte in s that matches one of the
- bytes in accept. NULL if no such byte is found
+ * bytes in accept. NULL if no such byte is found
  */
 char *_strpbrk(char *s, char *accept)
 {
