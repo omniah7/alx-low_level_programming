@@ -1,5 +1,5 @@
 /**
- * *_memset -  copies memory area
+ * *_memcpy -  copies memory area
  * @dest: the copied-to pointer
  * @src: the copied-from pointer
  * @n: number of first bytes of the memory area pointed to by src
