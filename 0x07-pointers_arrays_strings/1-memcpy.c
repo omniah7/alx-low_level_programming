@@ -6,7 +6,7 @@
  * Description: The _memcpy() function copies n bytes from memory area src to memory area dest
  * Return: a pointer to dest
  */
-*_memcpy(char *dest, char *src, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
 
