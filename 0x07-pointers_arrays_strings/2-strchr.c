@@ -16,5 +16,4 @@
 			return (s + (i - 1));
 		i++;
 	}
-	return (NULL);
  }
