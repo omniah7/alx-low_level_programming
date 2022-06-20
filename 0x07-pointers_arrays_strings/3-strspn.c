@@ -1,5 +1,5 @@
 /**
- * int _strspn - gets the length of a prefix substring
+ * _strspn - gets the length of a prefix substring
  * @s: pointer to the string
  * @accept: pointer to characters to be matched
  * Return: number of bytes in the initial segment of s
@@ -7,7 +7,8 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j, b;
+	int i, j;
+	unsigned int b;
 
 	b = 0;
 	for (i = 0, s[i] != '\0'; i++)
