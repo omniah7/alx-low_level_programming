@@ -1,9 +1,11 @@
 /**
- * *_memset - fills memory with a constant byte
+ * *_memset -  copies memory area
  * @dest: the copied-to pointer
  * @src: the copied-from pointer
  * @n: number of first bytes of the memory area pointed to by src
- * Description: The _memcpy() function copies n bytes from memory area src to memory area dest
+ *
+ * Description: The _memcpy() function copies n bytes from
+ * memory area src to memory area dest
  * Return: a pointer to dest
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
