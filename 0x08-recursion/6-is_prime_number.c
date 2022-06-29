@@ -6,7 +6,7 @@
  */
 int is_prime_number(int n)
 {
-	return(prime(n, 2));
+	return (prime(n, 2));
 }
 /**
  * prime - checks if a number is prime or not
@@ -16,10 +16,10 @@ int is_prime_number(int n)
  */
 int prime(int n, int g)
 {
-	if (n == 2)
+	if (n >= 2 && g == n)
 		return (1);
-	else if (n % g == 0 || n < 2 )
+	else if (n % g == 0 || n < 2)
 		return (0);
 	else
-		return(prime(n, g + 1));
+		return (prime(n, g + 1));
 }
