@@ -6,20 +6,20 @@
  */
 int _sqrt_recursion(int n)
 {
-	return (sqrt(n, 1));
+	return (square(n, 1));
 }
 /**
  * sqrt - returns the natural square root of a number
  * @n: the number
  * @g: a guess number
- * Return: the natural square root if exists. -1 if not 
+ * Return: the natural square root if exists. -1 if not
  */
-int sqrt(int n, int g)
+int square(int n, int g)
 {
 		if (g * g == n)
 			return (g);
 		else if (g * g < n)
-			return (sqrt(n, g + 1));
+			return (square(n, g + 1));
 		else
 			return (-1);
 }
