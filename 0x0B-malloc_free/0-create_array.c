@@ -5,7 +5,7 @@
  * @size:the size of the array
  * @c: a character
  * Description: this function creates an array of chars, and initializes it
- * 		with a specific char
+ *		with a specific char
  * Return: a pointer to the array, or NULL if it fails
  */
 char *create_array(unsigned int size, char c)
@@ -24,4 +24,5 @@ char *create_array(unsigned int size, char c)
 	}
 	else
 		return (NULL);
+	free(p);
 }
