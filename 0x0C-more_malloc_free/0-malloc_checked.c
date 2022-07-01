@@ -13,7 +13,7 @@
 	p = malloc(b);
 
 	if (p != NULL)
-		return (b);
+		return (p);
 
 	exit(98);
 }
