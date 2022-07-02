@@ -9,13 +9,17 @@
  * and null terminated
  * If n is greater or equal to the length of s2 then use the entire string s2
  * if NULL is passed, treat it as an empty string
- * Return: a pointer to the concatenated string.  Null if fails
+ * Return: a pointer to the concatenated string. Null if fails
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n);
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i,j;
 	char *s;
 
+	if (s1 == NULL) 
+		s1 = "";
+	if (s2 == NULL) 
+		s2 = "";
 	s = malloc((length(s1) + length(s2) + 1) * sizeof(char));
 	if (s != NULL)
 	{
@@ -42,9 +46,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n);
  * @str: a pointer to the string
  * Return; the length of str
  */
-int length(char *str)
+unsigned int length(char *str)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; str[i] != '\0'; i++)
 	;
