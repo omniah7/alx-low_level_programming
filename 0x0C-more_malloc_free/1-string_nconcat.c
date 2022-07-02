@@ -27,6 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		for (--n, i = 0; i <= n && s2[i] != NULL; i++)
 			p[i + l] = s2[i];
 		p[i + l] = NULL;
+		return (p);
 	}
 	free(p);
 	return (NULL);
