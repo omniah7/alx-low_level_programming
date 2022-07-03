@@ -14,7 +14,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (p != NULL)
 	{
 		while (nmemb--)
-			*((char *) (p) + nmemb) = 48;
+			*((char *) (p) + nmemb) = 0;
 
 		return (p);
 	}
