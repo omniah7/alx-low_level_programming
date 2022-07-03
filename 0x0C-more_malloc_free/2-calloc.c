@@ -8,13 +8,13 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *p;
+	int *p;
 
 	p = malloc(nmemb * size);
 	if (p != NULL)
 	{
-	/*	while (nmemb--)
-			p[nmemb - 1] = 0;*/
+		while (nmemb--)
+			p[nmemb - 1] = 0;
 
 		return (p);
 	}
