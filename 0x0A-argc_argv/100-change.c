@@ -8,7 +8,7 @@
  */
 int main(int argc, char **argv)
 {
-	int total, cent[4], i, n;
+	int total, i, n;
 
 	if (argc != 2)
 	{
@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 		printf("0\n");
 		return (0);
 	}
-	cent = {2 , 5, 10, 25};
+	int cent[4] = {2, 5, 10, 25};
 	total = 0;
 	for (i = 3; i >= 0;i--)
 	{
