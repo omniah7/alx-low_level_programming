@@ -8,13 +8,13 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *p;
+	void *p;
 
 	p = malloc(nmemb * size);
 	if (p != NULL)
 	{
 		while (nmemb--)
-			p[nmemb] = 48;
+			*((char *) (p) + nmemb) = 48;
 
 		return (p);
 	}
