@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 		printf("0\n");
 		return (0);
 	}
-	cent[] = {2 , 5, 10, 25};
+	cent = {2 , 5, 10, 25};
 	total = 0;
 	for (i = 3; i >= 0;i--)
 	{
