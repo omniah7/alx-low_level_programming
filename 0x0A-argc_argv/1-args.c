@@ -2,7 +2,7 @@
 /**
  * main - prints the number of arguments passed into it
  * @argc: arguments count
- * @argc: arguments vector
+ * @argv: arguments vector
  * Return: 0 on success
 */
 int main(int argc, char **argv)
