@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 	cent[3] = 10;
 	cent[4] = 25;
 	total = 0;
-	for (i = 4; i >= 0;i--)
+	for (i = 4; i >= 0; i--)
 	{
 		if (n >= cent[i])
 		{
