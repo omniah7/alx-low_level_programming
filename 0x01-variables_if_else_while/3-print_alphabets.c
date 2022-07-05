@@ -6,11 +6,13 @@
 int main(void)
 {
 	int i;
-	int j;
-	for (i = 97 ; i <= 122 ; i++)
+
+	for (i = 'a'; i <= 'z'; i++)
 		putchar(i);
-	for (j = 65 ; j <= 90 ; j++)
+
+	for (j = 'A' ; j <= 'Z' ; j++)
 		putchar(j);
+
 	putchar('\n');
 	return (0);
 }
