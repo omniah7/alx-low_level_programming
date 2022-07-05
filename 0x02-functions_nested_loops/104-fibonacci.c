@@ -21,7 +21,7 @@ int main(void)
 		sum = j + k;
 		j = k;
 		k = sum;
-		printf("%i", sum);
+		printf("%lu", sum);
 		if (i != 95)
 			printf(", ");
 		i++;
