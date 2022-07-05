@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	unsigned long int j, k, sum;
+	unsigned long long int j, k, sum;
 	int i;
 
 	j = 1;
@@ -21,7 +21,7 @@ int main(void)
 		sum = j + k;
 		j = k;
 		k = sum;
-		printf("%lu", sum);
+		printf("%llu", sum);
 		if (i != 95)
 			printf(", ");
 		i++;
