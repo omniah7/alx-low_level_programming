@@ -14,39 +14,34 @@
  */
 int main(void)
 {
-	int n, m, k, l;
+	int n1, n2, m1, m2;
 
-	for (n = 0 ; n <= 9 ; n++)
+	for (n1 = 0 ; n1 <= 9 ; n1++)
 	{
-		for (m = 0 ; m <= 9 ; m++)
+	for (n2 = 0 ; n2 <= 9 ; n2++)
+	{
+	for (m1 = n1  ; m1 <= 9 ; m1++)
+	{
+		if (m1 == n1)
+			m2 = n2 + 1;
+		else
+			m2 = 0;
+		while (m2 <= 9)
 		{
-			for (k = 0  ; k <= 9 ; k++)
+			putchar(n1 + '0');
+			putchar(n2 + '0');
+			putchar(' ');
+			putchar(m1 + '0');
+			putchar(m2 + '0');
+			if (!(n1 == 9 && n2 == 8 && m1 == 9 && m2 == 9))
 			{
-				if ( n <= k && m <= l)
-				{
-					for (l = 0 ; l <= 9 ; l++)
-					{
-						if (!(n == k && m == l))
-						{
-                                   			if ( n <= k && m <= l)
-							{
-								putchar(n + '0');
-								putchar(m + '0');
-								putchar(' ');
-								putchar(k + '0');
-								putchar(l + '0');
-								/* if not the last number */
-								if (!(n == 9 && m == 8 && k == 9 && l == 9))
-								{
-									putchar(',');
-									putchar(' ');
-								}
-							}
-						}
-					}
-				}
+				putchar(',');
+				putchar(' ');
 			}
+			m2++;
 		}
+	}
+	}
 	}
 	putchar('\n');
 	return (0);
