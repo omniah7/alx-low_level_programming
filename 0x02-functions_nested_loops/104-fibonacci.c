@@ -2,13 +2,14 @@
 /**
  * main - prints the first 98 Fibonacci numbers, starting with 1 and 2
  * Description: The numbers should be separated by comma, followed by a space
- * You are not allowed to use long long, malloc, pointers, arrays/tables, or structures
+ * You are not allowed to use long long,malloc,pointers,arrays/tables,or structures
  * You are not allowed to hard code any Fibonacci number (except for 1 and 2)
  * Return: 0
  */
 int main(void)
 {
-	int i, j, k, sum;
+	unsigned long int j, k, sum;
+	int i;
 
 	j = 1;
 	k = 2;
