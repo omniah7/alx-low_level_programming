@@ -10,13 +10,16 @@ int main(void)
 	j = 0;
 	k = 1;
 	even = 0;
+	sum = 0;
 	while (sum < 4000000)
 	{
 		if (sum % 2 == 0)
 			even += sum;
+
+		sum = j + k;
 		j = k;
 		k = sum;
-		sum = j + k;
+
 	}
 	printf("%i\n", even);
 	return (0);
