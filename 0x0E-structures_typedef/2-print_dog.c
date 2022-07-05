@@ -4,9 +4,9 @@
 * print_dog - prints a struct dog
 * @d: a pointer to a struct dog
 * Description: If an element of d is NULL,
-*		print "(nil)" instead of this element
-*		if name is NULL, print "Name: (nil)"
-*		If d is NULL print nothing
+* print "(nil)" instead of this element
+* if name is NULL, print "Name: (nil)"
+* if d is NULL print nothing
 */
 void print_dog(struct dog *d)
 {
