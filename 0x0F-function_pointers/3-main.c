@@ -44,3 +44,4 @@ int main(int argc, char **argv)
 		printf("%i\n", get_op_func(o)(a, b));
 	return (0);
 }
+
