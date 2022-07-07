@@ -17,7 +17,6 @@ int main(int argc, char **argv)
 {
 	int a, b;
 	char *o;
-	
 
 	if (argc != 4)
 	{
@@ -34,7 +33,6 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 
-
 	if (o[1] != '\0' || get_op_func(o) == NULL)
 	{
 		printf("Error\n");
@@ -44,4 +42,3 @@ int main(int argc, char **argv)
 		printf("%i\n", get_op_func(o)(a, b));
 	return (0);
 }
-
