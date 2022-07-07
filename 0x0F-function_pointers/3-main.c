@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 	}
 
 
-	if (get_op_func(o) == NULL)
+	if (*get_op_func(o) == 0)
 	{
 		printf("Error\n");
 		exit(99);
