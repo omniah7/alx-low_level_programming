@@ -1,4 +1,4 @@
-#include "3-get_op_func.c"
+#include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
 /**
@@ -10,7 +10,7 @@
 * and exit with the status 98
 * Otherwise print Error, and exit with the status 99
 * if the user tries to divide (/ or %) by 0,
-* print  * ** Error, and exit with the status 100
+* print Error, and exit with the status 100
 * Return: 0
 */
 int main(int argc, char **argv)
