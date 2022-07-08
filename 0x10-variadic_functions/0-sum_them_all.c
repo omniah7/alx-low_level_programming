@@ -7,11 +7,10 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list va;
-	int sum;
+	int sum, i;
 
-	sum = 0;
 	va_start(va, n);
-	while (n--)
+	for (i = 0, sum = 0; i < n; i++)
 	{
 		sum += va_arg(va, int);
 	}
