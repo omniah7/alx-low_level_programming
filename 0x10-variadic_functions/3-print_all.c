@@ -7,8 +7,7 @@ void strFunc(va_list list)
 {
 	if (va_arg(list, char*) != NULL)
 		printf("%s", va_arg(list, char*));
-	else
-		printf("(nil)");
+	printf("(nil)");
 }
 
 /**
