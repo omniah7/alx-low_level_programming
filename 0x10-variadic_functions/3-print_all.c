@@ -51,6 +51,7 @@ void charFunc(va_list list)
 void print_all(const char * const format, ...)
 {
 	int i, j;
+	va_list list;
 	FunType structs[] = {
 						{'s', strFunc},
 						{'c', charFunc},
@@ -66,7 +67,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == structs[j].t)
 			{
-				structs[j].f;
+				structs[j].f(list);
 				if (format[i + 1] != '\0')
 					printf(" ,");
 			}
