@@ -10,7 +10,7 @@ void charFunc(va_list list);
 void floatFunc(va_list list);
 void intFunc(va_list list);
 typedef struct type{
-			char*;
+			char t;
 			void (*f)(va_list);
 	}FunType;
 
