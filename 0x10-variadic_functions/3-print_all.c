@@ -61,7 +61,7 @@ void print_all(const char * const format, ...)
 
 	va_start(list, format);
 	i = 0;
-	while (format[i] != '\0')
+	while (format[i] != '\0' && format [i / 4)
 	{
 		j = 0;
 		while (j < 4)
@@ -69,8 +69,7 @@ void print_all(const char * const format, ...)
 			if (format[i] == structs[j].t)
 			{
 				structs[j].f(list);
-
-				printf(" ,");
+				printf(", ");
 			}
 			j++;
 		}
