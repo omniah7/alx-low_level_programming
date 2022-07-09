@@ -2,6 +2,7 @@
 #include <stdio.h>
 /**
 * strFunc - prints the string argument
+* @list: a va_list macro
 */
 void strFunc(va_list list)
 {
@@ -14,6 +15,7 @@ void strFunc(va_list list)
 
 /**
 * intFunc -  prints the int argument
+* @list: a va_list macro
 */
 void intFunc(va_list list)
 {
@@ -22,6 +24,7 @@ void intFunc(va_list list)
 
 /**
 * floatFunc -  prints the float argument
+* @list: a va_list macro
 */
 void floatFunc(va_list list)
 {
@@ -30,6 +33,7 @@ void floatFunc(va_list list)
 
 /**
 * charFunc -  prints the char argument
+* @list: a va_list macro
 */
 void charFunc(va_list list)
 {
@@ -53,6 +57,7 @@ void print_all(const char * const format, ...)
 {
 	int i, j;
 	va_list list;
+	char *sep = "";
 	FunType structs[] = {
 						{'s', strFunc},
 						{'c', charFunc},
@@ -62,15 +67,16 @@ void print_all(const char * const format, ...)
 
 	va_start(list, format);
 	i = 0;
-	while (format[i] != '\0')
+	while (format[i] != '\0' && format != NULL)
 	{
 		j = 0;
 		while (j < 4)
 		{
 			if (format[i] == structs[j].t)
 			{
+				printf("%s", sep);
 				structs[j].f(list);
-				printf(", ");
+
 			}
 			j++;
 		}
