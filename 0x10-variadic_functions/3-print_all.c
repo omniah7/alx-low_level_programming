@@ -58,6 +58,7 @@ void print_all(const char * const format, ...)
 						{'f', floatFunc}
 	};
 
+	va_start(list, format);
 	i = 0;
 	while (format[i] != '\0')
 	{
@@ -67,13 +68,14 @@ void print_all(const char * const format, ...)
 			if (format[i] == structs[j].t)
 			{
 				structs[j].f(list);
-				if (format[i + 1] != '\0')
-					printf(" ,");
+
+				printf(" ,");
 			}
 			j++;
 		}
 		i++;
 	}
+	va_end(list);
 	printf("\n");
 }
 
