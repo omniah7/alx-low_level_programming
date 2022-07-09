@@ -76,6 +76,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", sep);
 				structs[j].f(list);
+				sep = ", ";
 
 			}
 			j++;
