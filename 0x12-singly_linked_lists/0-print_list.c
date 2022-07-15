@@ -7,7 +7,7 @@
 size_t print_list(const list_t *h)
 {
 	list_t *node;
-	unsigned long elements = 0;
+	size_t elements = 0;
 
 	node = h;
 	while (node != NULL)
