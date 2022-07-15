@@ -3,23 +3,24 @@
 #include <stdlib.h>
 /**
  * add_node - adds a new node at the beginning of a list_t list
- * @h: array of list_t pointers
+ * @head: pointer to the first node
  * @str: a string
  * Return: the address of the new element, or NULL if it failed
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new;
-	unsigned int l;
+	list_t *new = malloc(sizeof(list_t));
 	char *dup = strdup(str);
+	unsigned int l;
 
-	if (dup == NULL || *head == NULL)
+	if (dup == NULL || new == NULL)
 	{
+		free(new);
 		return (NULL);
 	}
 	for (l = 0; dup[l] != '\0'; l++)
 		;
-	new = malloc(sizeof(list_t));
+
 	new->str = dup;
 	new->len = l;
 	new->next = *head;
