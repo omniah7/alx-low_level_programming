@@ -14,7 +14,7 @@ size_t print_list(const list_t *h)
 		h = h->next;
 		elements++;
 	}
-	printf("-> %u elements\n", elements);
+	printf("-> %lu elements\n", elements);
 	return (elements);
 }
 
