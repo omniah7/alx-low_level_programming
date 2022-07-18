@@ -10,25 +10,25 @@
 */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *tail = malloc(sizeof(list_t));
+	static list_t tail;
 	unsigned int l;
 	char *dup = strdup(str);
 
-	if (tail == NULL || dup == NULL)
-	{
-		free(tail);
-		return (NULL);
-	}
 	for (l = 0; dup[l] != '\0'; l++)
 		;
-	while ((*head)->next != NULL)
-	{
-		*head = (*head)->next;
-	}
 	tail->str = dup;
 	tail->len = l;
 	tail->next = NULL;
-	(*head)->next = tail;
-	return (tail);
+	if (*head != NULL)
+	{
+		while ((*head)->next != NULL)
+		{
+			*head = (*head)->next;
+		}
+		(*head)->next = tail;
+	}
+	else
+		*head = &tail;
+	return (&tail);
 }
 
