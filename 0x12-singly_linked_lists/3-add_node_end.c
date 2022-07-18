@@ -20,9 +20,10 @@ list_t *add_node_end(list_t **head, const char *str)
 		free(tail);
 		return (NULL);
 	}
+	tail->str = dup;
 	for (l = 0; dup[l] != '\0'; l++)
 		;
-	tail->str = dup;
+
 	tail->len = l;
 	tail->next = NULL;
 	if (node != NULL)
