@@ -16,16 +16,16 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	for (l = 0; dup[l] != '\0'; l++)
 		;
-	tail->str = dup;
-	tail->len = l;
-	tail->next = NULL;
+	tail.str = dup;
+	tail.len = l;
+	tail.next = NULL;
 	if (*head != NULL)
 	{
 		while ((*head)->next != NULL)
 		{
 			*head = (*head)->next;
 		}
-		(*head)->next = tail;
+		(*head)->next = &tail;
 	}
 	else
 		*head = &tail;
