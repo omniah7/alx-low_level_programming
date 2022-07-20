@@ -3,7 +3,7 @@
 #/**
 * insert_nodeint_at_index - inserts a new node at a given position
 * @head: the head of the list
-* @idx: the index of the list where the new node should be added.Starting from 0
+* @idx: the index of the list where the new node should be added
 * @n: an integer
 * Return: the address of the new node, or NULL if it failed
 */
@@ -13,7 +13,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *new = malloc(sizeof(listint_t));
 	unsigned int i;
 
-	if (new == NULL || *head == NULL)
+	if (new == NULL || *head == NULL || head == NULL)
 	{
 		free(new);
 		return (NULL);
@@ -37,5 +37,5 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	holder = node->next;
 	node->next = new;
 	new->next = holder;
-	return(new);
+	return (new);
 }
