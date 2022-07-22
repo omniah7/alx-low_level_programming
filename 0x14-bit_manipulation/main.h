@@ -4,6 +4,6 @@
 unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
 unsigned int expo_to_bin(unsigned int n, unsigned int base, unsigned int index);
-
+void print_binary(unsigned long int n);
 
 #endif
