@@ -1,10 +1,16 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - prints a quote
-* Return: 0
-*/
-int main(void)
+ *_puts - prints a string
+ * @str: string to print
+ *
+ * Description: prints a string
+ * On success: return the number of characters printed
+ */
+
+void _puts(char *str)
 {
-	puts("\"Programming is like building a multilingual puzzle");
-	return (0);
+	while (*str)
+		_putchar(*str++);
+
+	_putchar('\n');
 }
