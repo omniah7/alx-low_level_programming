@@ -12,7 +12,7 @@ int main(int ac, char **av)
 	int fd[2], _close[2];
 	char buf[1024];
 	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-	
+
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -27,9 +27,8 @@ int main(int ac, char **av)
 	}
 
 	fd[1] = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, mode);
-	do
-	{
-		_read = read(fd[0], buf, 1024*sizeof(char));
+	do {
+		_read = read(fd[0], buf, 1024 * sizeof(char));
 		_write = write(fd[1], buf, _read);
 		if (_write == -1)
 		{
@@ -37,7 +36,6 @@ int main(int ac, char **av)
 			exit(99);
 		}
 	} while (_read > 0);
-	
 
 	_close[0] = close(fd[0]);
 	_close[1] = close(fd[1]);
