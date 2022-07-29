@@ -8,7 +8,7 @@
 */
 int main(int ac, char **av)
 {
-	int  _write, i;
+	int _write, _read, i;
 	int fd[2], _close[2];
 	char buf[1024];
 	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
@@ -27,13 +27,17 @@ int main(int ac, char **av)
 	}
 
 	fd[1] = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, mode);
-	read(fd[0], buf, 1024);
-	_write = write(fd[1], buf, 1024);
-	if (_write == -1)
+	do
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		exit(99);
-	}
+		_read = read(fd[0], buf, 1024*sizeof(char));
+		_write = write(fd[1], buf, _read);
+		if (_write == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			exit(99);
+		}
+	} while (_read > 0);
+	
 
 	_close[0] = close(fd[0]);
 	_close[1] = close(fd[1]);
