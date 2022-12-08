@@ -30,7 +30,7 @@ unsigned int idx, int n)
 		current = current->next;
 	}
 
-	if (!current->next)
+	if (!current)
 	{
 		return (add_dnodeint_end(head, n));
 	}
