@@ -28,12 +28,16 @@ def vertical(pos, max, grid):
     p = 0
 
     # check the cell above
-    if row != 0:
+    if row == 0:
+        p += 1
+    else:
         if grid[row - 1][col] == 0:
             p += 1
 
     # check the cell at bottom
-    if row != max:
+    if row == max:
+        p += 1
+    else:
         if grid[row + 1][col] == 0:
             p += 1
 
@@ -54,12 +58,16 @@ def horizontal(pos, max, grid):
     p = 0
 
     # check the left cell
-    if col != 0:
+    if col == 0:
+        p += 1
+    else:
         if grid[row][col - 1] == 0:
             p += 1
 
     # check the right cell
-    if col != max:
+    if col == max:
+        p += 1
+    else:
         if grid[row][col + 1] == 0:
             p += 1
 
