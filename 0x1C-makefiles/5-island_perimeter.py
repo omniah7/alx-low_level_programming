@@ -9,8 +9,8 @@ def island_perimeter(grid):
     colength = len(grid[0])
     for row in range(rowlength):
         for col in range(colength):
-            perimeter += vertical((row, col), rowlength, grid)
-            perimeter += horizontal((row, col), colength, grid)
+            perimeter += vertical((row, col), rowlength - 1, grid)
+            perimeter += horizontal((row, col), colength - 1, grid)
     return perimeter
 
 
