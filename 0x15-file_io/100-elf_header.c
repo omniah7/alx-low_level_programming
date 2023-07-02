@@ -156,7 +156,7 @@ void print_osApi(Elf32_Ehdr h)
 * print_version - displays the version
 * @h: the elf header
 */
-void print_vresion(Elf32_Ehdr h)
+void print_version(Elf32_Ehdr h)
 {
 	printf("Version: %d", h.e_ident[EI_VERSION]);
 	if (h.e_ident[EI_VERSION] == EV_CURRENT)

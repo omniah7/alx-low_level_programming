@@ -24,7 +24,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	fd[1] = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, mode);
+	fd[1] = open(av[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, mode);
 	if (fd[1] == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", av[2]);
