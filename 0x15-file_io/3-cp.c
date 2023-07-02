@@ -44,11 +44,12 @@ int main(int ac, char **av)
 			exit(99);
 		}
 	} while (_read > 0);
+	close_files(fd);
 	return (0);
 }
 /**
 * close_files - close the opened files
-* @fd: array of files indexes
+* @fd: array of files descriptors
 */
 void close_files(int fd[])
 {
