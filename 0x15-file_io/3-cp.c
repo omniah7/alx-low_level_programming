@@ -8,7 +8,7 @@
 */
 int main(int ac, char **av)
 {
-	int _write, _read, fd[2];
+	int _write, _read, files[2];
 	char buf[1024];
 	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
@@ -18,34 +18,47 @@ int main(int ac, char **av)
 		exit(97);
 	}
 
-	fd[0] = open(av[1], O_RDONLY);
-	if (fd[0] == -1)
+	files[0] = open(av[1], O_RDONLY);
+	check_read(files[0], av[1]);
+
+	files[1] = open(av[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, mode);
+	check_write(files[1], av[2]);
+	do {
+		_read = read(files[0], buf, 1024 * sizeof(char));
+		check_read(_read, av[1]);
+
+		_write = write(files[1], buf, _read);
+		check_write(_write, av[2]);
+	} while (_read > 0);
+
+	close_files(files);
+	return (0);
+}
+/**
+* check_write - checks if there is an error and exits with status 99
+* @_write: the write return value
+* @filename: the filename
+*/
+void check_write(int _write, char *filename)
+{
+	if (_write == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-		exit(98);
-	}
-	fd[1] = open(av[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, mode);
-	if (fd[1] == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", av[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 		exit(99);
 	}
-	do {
-		_read = read(fd[0], buf, 1024 * sizeof(char));
-		if (_read == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from %s\n", av[1]);
-			exit(98);
-		}
-		_write = write(fd[1], buf, _read);
-		if (_write == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-			exit(99);
-		}
-	} while (_read > 0);
-	close_files(fd);
-	return (0);
+}
+/**
+* check_read - checks if there is an error and exits with status 98
+* @_read: the read return value
+* @filename: the filename
+*/
+void check_read(int _read, char *filename)
+{
+	if (_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", filename);
+		exit(98);
+	}
 }
 /**
 * close_files - close the opened files

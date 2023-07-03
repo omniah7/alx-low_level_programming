@@ -74,7 +74,7 @@ int check(char *filename, Elf32_Ehdr *h)
 */
 void print_entry(Elf32_Ehdr h)
 {
-	printf("Entry point address: %x\n", h.e_entry);
+	printf("  Entry point address:               %x\n", h.e_entry);
 }
 /**
 * print_type - displays the Type
@@ -82,23 +82,23 @@ void print_entry(Elf32_Ehdr h)
 */
 void print_type(Elf32_Ehdr h)
 {
-	printf("Type: ");
+	printf("  Type:                              ");
 	switch (h.e_type)
 	{
 		case ET_NONE:
-			printf("NONE\n");
+			printf("NONE (None)\n");
 			break;
 		case ET_REL:
-			printf("REL\n");
+			printf("REL (Relocatable file)\n");
 			break;
 		case ET_EXEC:
-			printf("EXEC\n");
+			printf("EXEC (Executable file)\n");
 			break;
 		case ET_DYN:
-			printf("DYN\n");
+			printf("DYN (Shared object file)\n");
 			break;
 		case ET_CORE:
-			printf("CORE\n");
+			printf("CORE (Core file)\n");
 			break;
 	}
 }
@@ -108,7 +108,7 @@ void print_type(Elf32_Ehdr h)
 */
 void print_apiVersion(Elf32_Ehdr h)
 {
-	printf("ABI Version: %i\n", h.e_ident[EI_ABIVERSION]);
+	printf("  ABI Version:                       %i\n", h.e_ident[EI_ABIVERSION]);
 
 }
 /**
@@ -117,7 +117,7 @@ void print_apiVersion(Elf32_Ehdr h)
 */
 void print_osApi(Elf32_Ehdr h)
 {
-		printf("OS/ABI: ");
+		printf("  OS/ABI:                            ");
 		switch (h.e_ident[EI_OSABI])
 		{
 			case ELFOSABI_SYSV:
@@ -158,7 +158,7 @@ void print_osApi(Elf32_Ehdr h)
 */
 void print_version(Elf32_Ehdr h)
 {
-	printf("Version: %d", h.e_ident[EI_VERSION]);
+	printf("  Version:                           %d", h.e_ident[EI_VERSION]);
 	if (h.e_ident[EI_VERSION] == EV_CURRENT)
 		printf(" (current)\n");
 	else
@@ -170,7 +170,7 @@ void print_version(Elf32_Ehdr h)
 */
 void print_data(Elf32_Ehdr h)
 {
-	printf("Data: ");
+	printf("  Data:                              ");
 	if (h.e_ident[EI_DATA] == ELFDATA2LSB)
 		printf("2's complement, little-endian\n");
 	else
@@ -182,7 +182,7 @@ void print_data(Elf32_Ehdr h)
 */
 void print_class(Elf32_Ehdr h)
 {
-	printf("Class: ");
+	printf("  Class:                             ");
 	if (h.e_ident[EI_CLASS] == ELFCLASS32)
 		printf("ELF32\n");
 	else
@@ -196,10 +196,12 @@ void print_magic(Elf32_Ehdr h)
 {
 	int i;
 
-	printf("Magic: ");
+	printf("  Magic:   ");
 	for (i = 0; i < EI_NIDENT; i++)
 	{
 		printf("%02x ", h.e_ident[i]);
+		if (i != EI_NIDENT - 1)
+			printf(" ");
 	}
 	printf("\n");
 }

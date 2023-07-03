@@ -18,6 +18,8 @@ void print_apiVersion(Elf32_Ehdr h);
 void print_type(Elf32_Ehdr h);
 void print_entry(Elf32_Ehdr h);
 int check(char *filename, Elf32_Ehdr *h);
+void check_read(int _read, char *filename);
+void check_write(int _write, char *filename);
 void close_files(int fd[]);
 
 #endif
