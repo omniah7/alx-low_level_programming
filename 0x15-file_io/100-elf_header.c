@@ -74,7 +74,7 @@ int check(char *filename, Elf32_Ehdr *h)
 */
 void print_entry(Elf32_Ehdr h)
 {
-	printf("  Entry point address:               %x\n", h.e_entry);
+	printf("  Entry point address:               0x%x\n", h.e_entry);
 }
 /**
 * print_type - displays the Type
@@ -121,7 +121,7 @@ void print_osApi(Elf32_Ehdr h)
 		switch (h.e_ident[EI_OSABI])
 		{
 			case ELFOSABI_SYSV:
-			printf("UNIX System V\n");
+			printf("UNIX - System V\n");
 			break;
 		case ELFOSABI_HPUX:
 			printf("HP-UX\n");
@@ -199,7 +199,7 @@ void print_magic(Elf32_Ehdr h)
 	printf("  Magic:   ");
 	for (i = 0; i < EI_NIDENT; i++)
 	{
-		printf("%02x ", h.e_ident[i]);
+		printf("%02x", h.e_ident[i]);
 		if (i != EI_NIDENT - 1)
 			printf(" ");
 	}

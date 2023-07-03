@@ -56,7 +56,7 @@ void check_read(int _read, char *filename)
 {
 	if (_read == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", filename);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
 		exit(98);
 	}
 }
